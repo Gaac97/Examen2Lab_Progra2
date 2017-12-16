@@ -79,11 +79,13 @@ public class Hilo extends Thread {
                 int seg = 0;
                 String segundos = "" + seg;
                 label1.setText(segundos);
+                label2.setText(segundos);
                 if (seg == inicio) {
 
                     seg += 1;
                     label1.setText(segundos);
                 }
+                
 
             }
         } catch (Exception e) {
