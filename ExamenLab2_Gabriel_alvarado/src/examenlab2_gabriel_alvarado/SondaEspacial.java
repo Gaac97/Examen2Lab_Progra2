@@ -13,6 +13,9 @@ public class SondaEspacial  extends NavesEspaciales implements Tiempo {
     private String material;
     private int peso;
 
+    public SondaEspacial() {
+    }
+
     public SondaEspacial(String material, int peso, String serie, Planetas destino, int velocidad) {
         super(serie, destino, velocidad);
         this.material = material;

@@ -81,6 +81,7 @@ public class Principal extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
         tf_velocidad1 = new javax.swing.JTextField();
+        jButton15 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -94,6 +95,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         tf_velocidad = new javax.swing.JTextField();
         cb_despeje = new javax.swing.JComboBox();
+        jButton14 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -105,6 +107,7 @@ public class Principal extends javax.swing.JFrame {
         tf_serie2 = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
         cb_destinos2 = new javax.swing.JComboBox();
+        jButton13 = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         cb_astronautas2 = new javax.swing.JComboBox();
         jLabel26 = new javax.swing.JLabel();
@@ -130,6 +133,11 @@ public class Principal extends javax.swing.JFrame {
         tf_pos1 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
+        label1 = new javax.swing.JLabel();
+        label2 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
 
         Modificar.setText("Modificar");
         Modificar.addActionListener(new java.awt.event.ActionListener() {
@@ -272,11 +280,19 @@ public class Principal extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
+        jPanel4.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, -1, -1));
 
         jLabel25.setText("Velocidad");
         jPanel4.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
         jPanel4.add(tf_velocidad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 190, -1));
+
+        jButton15.setText("Cargar");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, -1, -1));
 
         jTabbedPane2.addTab("Nave espacial", jPanel4);
 
@@ -294,7 +310,7 @@ public class Principal extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
+        jPanel6.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
 
         jLabel21.setText("Elija un astronauta");
         jPanel6.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
@@ -308,6 +324,11 @@ public class Principal extends javax.swing.JFrame {
         jLabel24.setText("planeta destino");
         jPanel6.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 80, 10));
 
+        cb_destinos1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_destinos1ActionPerformed(evt);
+            }
+        });
         jPanel6.add(cb_destinos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 210, 20));
 
         jLabel22.setText("Velocidad");
@@ -315,6 +336,14 @@ public class Principal extends javax.swing.JFrame {
         jPanel6.add(tf_velocidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 200, -1));
 
         jPanel6.add(cb_despeje, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 210, -1));
+
+        jButton14.setText("cargar");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, -1, -1));
 
         jTabbedPane2.addTab("nave tripulada", jPanel6);
 
@@ -337,7 +366,7 @@ public class Principal extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 327, -1, -1));
+        jPanel5.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, -1, -1));
 
         jLabel27.setText("numero serie");
         jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, 10));
@@ -347,6 +376,14 @@ public class Principal extends javax.swing.JFrame {
         jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, 10));
 
         jPanel5.add(cb_destinos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 210, 20));
+
+        jButton13.setText("Cargar");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, -1, -1));
 
         jTabbedPane2.addTab("Sonda espacial", jPanel5);
 
@@ -512,20 +549,63 @@ public class Principal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Listar planetas", jPanel8);
 
+        label1.setText("jLabel34");
+
+        label2.setText("jLabel35");
+
+        jLabel36.setText("Inicio");
+
+        jLabel37.setText("final");
+
+        jButton12.setText("Iniciar");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 455, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel36)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel37))
+                        .addGap(66, 66, 66))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(jButton12)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 442, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jButton12)))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(jLabel37))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("tab6", jPanel9);
+        jTabbedPane1.addTab("Hilo", jPanel9);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 470));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 460, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -686,13 +766,17 @@ public class Principal extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         DefaultComboBoxModel model = (DefaultComboBoxModel) cb_planetas2.getModel();
         DefaultComboBoxModel model2  = (DefaultComboBoxModel)cb_despeje.getModel();
+        DefaultComboBoxModel model4 = (DefaultComboBoxModel)cb_destinos.getModel();
+        
        
         for (Planetas t : ListPlanetas) {
             model.addElement(t);
             model2.addElement(t);
+            model4.addElement(t);
         }
         cb_planetas2.setModel(model);
         cb_despeje.setModel(model2);
+        cb_destinos.setModel(model4);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -726,8 +810,8 @@ public class Principal extends javax.swing.JFrame {
 
             }
             if (tabla.getSelectedRow() >= 0) {
-                DefaultTableModel model = (DefaultTableModel) tabla1.getModel();
-                model.removeRow(tabla1.getSelectedRow());
+                DefaultTableModel model = (DefaultTableModel) tabla.getModel();
+                model.removeRow(tabla.getSelectedRow());
                 tabla.setModel(model);
             }
             for (Astronautas g : ListAstronauta) {
@@ -798,6 +882,52 @@ public class Principal extends javax.swing.JFrame {
         tabla1.setModel(model);
     }//GEN-LAST:event_jButton10ActionPerformed
 
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    SondaEspacial s = new SondaEspacial();
+    double inicio = s.timepoIda(WIDTH, WIDTH);
+    double finaly = s.regreso(inicio, 2);
+        Hilo h = new Hilo(label1, label2, inicio, finaly,true);
+        h.start();
+    
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    DefaultComboBoxModel model = (DefaultComboBoxModel)cb_destinos2.getModel();
+        for (Astronautas q : ListAstronauta) {
+            model.addElement(q);
+        }
+        cb_destinos2.setModel(model);
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    DefaultComboBoxModel model = (DefaultComboBoxModel)cb_destinos1.getModel();
+    DefaultComboBoxModel model2 = (DefaultComboBoxModel)cb_despeje.getModel();
+        for (Planetas q : ListPlanetas) {
+            model.addElement(q);
+            model2.addElement(q);
+        }
+        cb_destinos1.setModel(model);
+        cb_despeje.setModel(model2);
+        
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void cb_destinos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_destinos1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_destinos1ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    DefaultComboBoxModel model = (DefaultComboBoxModel)cb_destinos.getModel();
+        for (Planetas w : ListPlanetas) {
+            model.addElement(w);
+        }
+        cb_destinos.setModel(model);
+       DefaultComboBoxModel model2 = (DefaultComboBoxModel)cb_astronautas.getModel();
+        for (Astronautas w : ListAstronauta) {
+            model2.addElement(w);
+        }
+        cb_astronautas.setModel(model2);
+    }//GEN-LAST:event_jButton15ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -851,6 +981,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -886,6 +1020,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -906,6 +1042,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel label1;
+    private javax.swing.JLabel label2;
     private javax.swing.JMenuItem mod;
     private javax.swing.JPopupMenu ppm2;
     private javax.swing.JPopupMenu ppmenu;
