@@ -164,6 +164,11 @@ public class Principal extends javax.swing.JFrame {
         ppm2.add(mod);
 
         eliminate.setText("eliminar");
+        eliminate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminateActionPerformed(evt);
+            }
+        });
         ppm2.add(eliminate);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -816,7 +821,7 @@ public class Principal extends javax.swing.JFrame {
             }
             for (Astronautas g : ListAstronauta) {
 
-                if (cb_planetas2.getSelectedItem().toString().equals(g.getNombre())) {
+                if (cb_astronautas2.getSelectedItem().toString().equals(g.getNombre())) {
                     ListAstronauta.remove(g);
 
                 }
@@ -927,6 +932,33 @@ public class Principal extends javax.swing.JFrame {
         }
         cb_astronautas.setModel(model2);
     }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void eliminateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminateActionPerformed
+    try {
+
+            //int pos = Integer.parseInt(tf_pos.getText());
+            if (cb_planetas2.getSelectedIndex() >= 0) {
+                DefaultComboBoxModel model = (DefaultComboBoxModel) cb_planetas2.getModel();
+                model.removeElementAt(cb_planetas2.getSelectedIndex());
+                cb_planetas2.setModel(model);
+
+            }
+            if (tabla1.getSelectedRow() >= 0) {
+                DefaultTableModel model = (DefaultTableModel) tabla1.getModel();
+                model.removeRow(tabla1.getSelectedRow());
+                tabla1.setModel(model);
+            }
+            for (Planetas g : ListPlanetas) {
+
+                if (cb_planetas2.getSelectedItem().toString().equals(g.getNombre())) {
+                    ListPlanetas.remove(g);
+
+                }
+            }
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_eliminateActionPerformed
 
     /**
      * @param args the command line arguments
